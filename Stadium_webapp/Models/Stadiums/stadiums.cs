@@ -10,7 +10,7 @@ namespace Stadium_webapp.Models.Stadiums
 		public int Id { get; set; }
 		public string Name { get; set; }
 		public string ClubName { get; set; }
-		public double TicketPrice { get; set; }
+		public string TicketPrice { get; set; }
 		public int Capacity { get; set; }
 		
 	}
