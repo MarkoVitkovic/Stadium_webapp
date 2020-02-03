@@ -6,7 +6,8 @@
 <div style="width:100%; height:200px; padding-left:270px;">
 	<img width="600px" height="100%" src="~/images/logo.png"/>
 </div>
-<div style="background-image: linear-gradient(to right, #ff00ff, #ffb95a); padding-top:22px;"> @*margin:0px -15px;*@
+<div style="background-image: linear-gradient(to right, #ff00ff, #ffb95a); padding-top:22px; margin:0px 10px;">
+	
 	<div class="flex flex-wrap">
 		<div class="lg-col-9" style="text-align:center;">
 
@@ -18,17 +19,21 @@
 							<div class="flip-card-front">
 								<img src="~/images/emir.jpg" alt="Avatar" style="width:300px;height:200px;">
 							</div>
-							<div class="flip-card-back flex flex-wrap">
+							<div class="flip-card-back flex flex-wrap" style="background-color:#fe0002">
 
-								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
-								@Html.DisplayFor(modelItem => item.Name)</div><br />
-								@Html.DisplayFor(modelItem => item.Capacity)<br />
-								@Html.DisplayFor(modelItem => item.TicketPrice)<br />
-								<div style="margin-top:23px;">
-								<a href="https://www.premierleague.com/clubs/1/Arsenal/stadium" role="menuitem">Stadium Profile</a>
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+									<div style="margin-top:23px;">
+										<a href="https://www.premierleague.com/clubs/1/Arsenal/stadium" role="menuitem">Stadium Profile</a>
+									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 				}
 			</div>
@@ -40,15 +45,19 @@
 							<div class="flip-card-front">
 								<img src="~/images/villa.jpg" alt="Avatar" style="width:300px;height:200px;">
 							</div>
-							<div class="flip-card-back">
-
-								@Html.DisplayFor(modelItem => item.Name)<br />
-								@Html.DisplayFor(modelItem => item.Capacity)<br />
-								@Html.DisplayFor(modelItem => item.TicketPrice)
-								<p>
+							<div class="flip-card-back" style="background-color:#480025">
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
 									<a href="https://www.premierleague.com/clubs/2/Aston-Villa/stadium" role="menuitem">Stadium Profile</a>
-								</p>
-							</div>
+									</div>
+								</div>
 						</div>
 					</div>
 				}
@@ -61,352 +70,511 @@
 							<div class="flip-card-front">
 								<img src="~/images/vit.jpg" alt="Avatar" style="width:300px;height:200px;">
 							</div>
-							<div class="flip-card-back">
-
-								@Html.DisplayFor(modelItem => item.Name)<br />
-								@Html.DisplayFor(modelItem => item.Capacity)<br />
-								@Html.DisplayFor(modelItem => item.TicketPrice)
-								<p>
+							<div class="flip-card-back" style="background-color:#e62333">
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
 									<a href="https://www.premierleague.com/clubs/127/Bournemouth/stadium" role="menuitem">Stadium Profile</a>
-								</p>
-							</div>
+									</div>
+								</div>
 						</div>
 					</div>
 				}
 			</div>
 		</div>
 	</div>
-	@foreach (var item in Model.Where(item => item.Id == 12))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/brig.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
+	<div class="flex flex-wrap">
+		<div class="lg-col-9" style="text-align:center; padding-top:22px;" >
 
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/131/Brighton-and-Hove-Albion/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 12))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front" style="background-color:#0054a6">
+								<img src="~/images/brig.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/131/Brighton-and-Hove-Albion/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+
+				}
+			</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 16))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/turf.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#6a003a">
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/43/Burnley/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block;">
+				@foreach (var item in Model.Where(item => item.Id == 17))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/stam.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#0a4595">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/4/Chelsea/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
 			</div>
 		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 16))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/turf.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/43/Burnley/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 17))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/stam.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/4/Chelsea/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 18))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/selhu.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/6/Crystal-Palace/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 19))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/good.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/7/Everton/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 20))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/kingp.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/26/Leicester-City/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 21))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/anf.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/10/Liverpool/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 22))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/etih.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/11/Manchester-City/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 23))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/oldt.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/12/Manchester-United/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 24))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/stjames.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/23/Newcastle-United/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 25))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/carrow.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/14/Norwich-City/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 26))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/shef.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/18/Sheffield-United/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 27))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/stmary.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/20/Southampton/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 28))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/tott.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/21/Tottenham-Hotspur/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 29))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/wat.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/33/Watford/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 30))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/lons.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/25/West-Ham-United/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	}
-	@foreach (var item in Model.Where(item => item.Id == 31))
-	{
-		<div class="flip-card">
-			<div class="flip-card-inner">
-				<div class="flip-card-front">
-					<img src="~/images/molin.jpg" alt="Avatar" style="width:300px;height:200px;">
-				</div>
-				<div class="flip-card-back">
-
-					@Html.DisplayFor(modelItem => item.Name)<br />
-					@Html.DisplayFor(modelItem => item.Capacity)<br />
-					@Html.DisplayFor(modelItem => item.TicketPrice)
-					<p>
-						<a href="https://www.premierleague.com/clubs/38/Wolverhampton-Wanderers/stadium" role="menuitem">Stadium Profile</a>
-					</p>
-				</div>
-			</div>
-		</div>
-
-	}
-	<div style="padding-left:-70px; margin-top:60px;">
-		<img src="~/images/Sponzori.jpg" width="100%;" />
 	</div>
-	<form asp-action="Sortbyprice" method="post">
-		<label class="h1" style="font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;">Cheapest ticket</label>
-		<br />
-		<button type="submit" class="btn btn-info" style="padding:15px 15px; width:150px; margin-left:40px;  margin-bottom:15px;">Show 
-			<i class="fa fa-sort-down"></i></button>
-	</form>
+	<div class="flex flex-wrap">
+		<div class="lg-col-9" style="text-align:center; padding-top:22px;">
+
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 18))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front" >
+								<img src="~/images/selhu.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#eb302e">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/6/Crystal-Palace/stadium" role="menuitem">Stadium Profile</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 19))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/good.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#00369c">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/7/Everton/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block;">
+				@foreach (var item in Model.Where(item => item.Id == 20))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/kingp.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#273e8a">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/26/Leicester-City/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-wrap">
+		<div class="lg-col-9" style="text-align:center; padding-top:22px;">
+
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 21))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/anf.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#e31b23">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/10/Liverpool/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 22))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/etih.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#6caee0">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/11/Manchester-City/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block;">
+				@foreach (var item in Model.Where(item => item.Id == 23))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/oldt.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#d81920">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/12/Manchester-United/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-wrap">
+		<div class="lg-col-9" style="text-align:center; padding-top:22px;">
+
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 24))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/stjames.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#383838">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/23/Newcastle-United/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 25))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/carrow.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#00a94f">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/14/Norwich-City/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block;">
+				@foreach (var item in Model.Where(item => item.Id == 26))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/shef.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#ed1c24">
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/18/Sheffield-United/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+
+				}
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-wrap">
+		<div class="lg-col-9" style="text-align:center; padding-top:22px;">
+
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 27))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/stmary.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#d71920">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/20/Southampton/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 28))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/tott.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#f5f5f5">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/21/Tottenham-Hotspur/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block;">
+				@foreach (var item in Model.Where(item => item.Id == 29))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/wat.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#ffee00">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/33/Watford/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+	<div class="flex flex-wrap">
+		<div class="lg-col-9" style="text-align:center; padding-top:22px;">
+
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 30))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front">
+								<img src="~/images/lons.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back" style="background-color:#7d2c3b">
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/25/West-Ham-United/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+				}
+			</div>
+			<div class="col-3" style="display:inline-block; margin-right:20px;">
+				@foreach (var item in Model.Where(item => item.Id == 31))
+				{
+					<div class="flip-card">
+						<div class="flip-card-inner">
+							<div class="flip-card-front" style="background-color:#f9a01b">
+								<img src="~/images/molin.jpg" alt="Avatar" style="width:300px;height:200px;">
+							</div>
+							<div class="flip-card-back">
+
+								<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+									@Html.DisplayFor(modelItem => item.Name)
+								</div><br />
+								<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+									@Html.DisplayFor(modelItem => item.ClubName)<br />
+									Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+									Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+								</div>
+								<div style="margin-top:23px;">
+									<a href="https://www.premierleague.com/clubs/38/Wolverhampton-Wanderers/stadium" role="menuitem">Stadium Profile</a>
+									</div>
+								</div>
+						</div>
+					</div>
+
+				}
+
+			</div>
+
+			<div style="padding-left:-70px; margin-top:60px;">
+				<img src="~/images/Sponzori.jpg" width="100%;" />
+			</div>
+			<form asp-action="Sortbyprice" method="post">
+				<label class="h1" style="font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;">Cheapest tickets here:</label>
+				<br />
+				<button type="submit" class="btn btn-info" style="padding:15px 15px; width:150px; margin-left:40px;  margin-bottom:15px;">
+					More...
+					<i class="fa fa-sort-down"></i>
+				</button>
+			</form>
+			
+		</div>
 </div>
+</div>
+

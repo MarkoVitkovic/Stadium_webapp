@@ -5,7 +5,16 @@
 
 @foreach (var item in Model)
 {
-	@Html.DisplayFor(modelItem => item.Name)<br />
-	@Html.DisplayFor(modelItem => item.Capacity)<br />
-	@Html.DisplayFor(modelItem => item.TicketPrice)<br />
+	<div style="height:50px; text-align:center; font-size:30px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:20px;">
+		@Html.DisplayFor(modelItem => item.Name)
+	</div><br />
+	<div style="height:50px; text-align:center; font-size:15px; font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif; margin-top:10px;">
+		@Html.DisplayFor(modelItem => item.ClubName)<br />
+		Capacity: @Html.DisplayFor(modelItem => item.Capacity)<br />
+		Ticket Price(€): @Html.DisplayFor(modelItem => item.TicketPrice)<br />
+		_________________________<br />
+
+	</div>
+	<br />
+
 }
