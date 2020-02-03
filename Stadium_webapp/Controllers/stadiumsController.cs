@@ -149,6 +149,11 @@ namespace Stadium_webapp.Controllers
         {
             return _context.stadiums.Any(e => e.Id == id);
         }
+		public IActionResult Sortbyprice()
+		{
+			var price = from e in _context.stadiums orderby e.TicketPrice select e;
+			return View(price);
+		}
 		
 	}
 }

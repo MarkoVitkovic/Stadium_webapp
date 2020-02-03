@@ -1,0 +1,11 @@
+﻿@model IEnumerable<Stadium_webapp.Models.Stadiums.stadiums>
+@{
+	ViewData["Title"] = "Sortbyprice";
+}
+
+@foreach (var item in Model)
+{
+	@Html.DisplayFor(modelItem => item.Name)<br />
+	@Html.DisplayFor(modelItem => item.Capacity)<br />
+	@Html.DisplayFor(modelItem => item.TicketPrice)<br />
+}

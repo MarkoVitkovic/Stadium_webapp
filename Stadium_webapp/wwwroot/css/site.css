@@ -81,8 +81,13 @@ body {
 	transform: rotateY(180deg);
 }
 .stadium {
-	
+	margin-top:80px;
+	text-align:center;
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-
+.stadiumtext{
+	font-size:40px;
+	font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+	text-align:center;
+}
