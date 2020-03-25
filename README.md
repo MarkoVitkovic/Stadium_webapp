@@ -10,6 +10,7 @@
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
+* [ASP.NET Core MVC provides features to build web APIs and web apps](#ASP.NET Core MVC provides features to build web APIs and web apps)
 
 ## General info
 MERN stack project that track your or anyone else workout, you can add or delete or even edit your workout, but first you need to add yourself in database, so you always be able to see your exercise. Database is online at mongoDB. Frontend is write in react. Feel free to clone or download.
@@ -29,13 +30,11 @@ MERN stack project that track your or anyone else workout, you can add or delete
 
 
 ## Setup
-Open terminal(cmd) and navigate:</br>
-`npx create-react-app my-app`</br>
-`cd my-app`</br>
-`npm start`</br>
-Open source in Visual Studio Code.
+Start new ASP.NET Core project in visual studio 2017. </br>
+And then choose: </br>
+![](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started/_static/image1.png)
 
-## ASP.NET Core MVC provides features to build [web APIs](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio) and [web apps](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/?view=aspnetcore-3.1):
+## ASP.NET Core MVC provides features to build [web APIs](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio) and [web apps](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/?view=aspnetcore-3.1)
 
 The [Model-View-Controller (MVC) pattern](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1) helps make your web APIs and web apps testable.</br>
 [Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio) is a page-based programming model that makes building web UI easier and more productive.</br>
