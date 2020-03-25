@@ -10,7 +10,7 @@
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
-* [ASP.NET Core MVC provides features to build web APIs and web apps](#features)
+
 
 ## General info
 Application created using MVC, .NET framework, entity framework and linq. App contains all premier league stadiums, all info about them. Clone or download project to see all features.
