@@ -13,7 +13,7 @@
 * [ASP.NET Core MVC provides features to build web APIs and web apps](#setup)
 
 ## General info
-Application created using MVC and .NET framework, entity framework and linq. App contains all premier league stadiums, all info about them. Clone or download project to see all features.
+Application created using MVC, .NET framework, entity framework and linq. App contains all premier league stadiums, all info about them. Clone or download project to see all features.
 
 ## Screenshots
 ![](https://github.com/MarkoVitkovic/Stadium_webapp/blob/master/pocetna.png)
@@ -27,6 +27,7 @@ Application created using MVC and .NET framework, entity framework and linq. App
 * [Model-View-Controller (MVC) pattern](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1)
 * [Entity Framework](https://docs.microsoft.com/en-us/ef/)
 * [LINQ](https://docs.microsoft.com/en-us/dotnet/standard/using-linq)
+* [Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/) - version 4
 
 
 ## Setup
@@ -48,22 +49,17 @@ Built-in support for [multiple data formats and content negotiation](https://doc
 ## Code Examples
 Code:</br>
   
-`const router = require('express').Router();`</br>
-`let User = require('../models/user.model');`</br>
-`router.route('/').get((req, res) => {`</br>
- ` User.find()`</br>
-  `  .then(users => res.json(users))`</br>
-   ` .catch(err => res.status(400).json('Error: ' + err));`</br>
-`});`</br>
-`router.route('/add').post((req, res) => {`</br>
- ` const username = req.body.username;`</br>
-`const newUser = new User({username});`</br>
-`newUser.save()`</br>
- `   .then(() => res.json('User added!'))`</br>
-  `  .catch(err => res.status(400).json('Error: ' + err));`</br>
-`});`</br>
-`module.exports = router;`</br>
-
+  `private bool stadiumsExists(int id)`</br>
+   `     {`</br>
+    `        return _context.stadiums.Any(e => e.Id == id);`</br>
+     `   }`</br>
+		`public IActionResult Sortbyprice()`</br>
+		`{`</br>
+		`	var price = from e in _context.stadiums orderby e.TicketPrice select e;`</br>
+		`	return View(price);`</br>
+		`}`</br>
+	`}`</br>
+  
 ## Features
 List of features ready and TODOs for future development
 * Form for user register
