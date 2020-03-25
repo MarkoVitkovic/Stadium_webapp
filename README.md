@@ -1,5 +1,5 @@
-# Exercise Tracker
-> MERN stack project. Exercise tracker for you. 
+# Stadiums
+> App created with ASP.NET Core. Simple show of tehnology.
 
 ## Table of contents
 * [General info](#general-info)
@@ -10,10 +10,10 @@
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
-* [ASP.NET Core MVC provides features to build web APIs and web apps](#asp)
+* [ASP.NET Core MVC provides features to build web APIs and web apps](#setup)
 
 ## General info
-MERN stack project that track your or anyone else workout, you can add or delete or even edit your workout, but first you need to add yourself in database, so you always be able to see your exercise. Database is online at mongoDB. Frontend is write in react. Feel free to clone or download.
+Application created using MVC and .NET framework, entity framework and linq. App contains all premier league stadiums, all info about them. Clone or download project to see all features.
 
 ## Screenshots
 ![](https://github.com/MarkoVitkovic/Stadium_webapp/blob/master/pocetna.png)
@@ -25,8 +25,8 @@ MERN stack project that track your or anyone else workout, you can add or delete
 * [Razor Pages](https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-3.1&tabs=visual-studio)
 * [CSS](https://devdocs.io/css/) - version 3
 * [Model-View-Controller (MVC) pattern](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1)
-* [Express](https://expressjs.com/en/api.html) - version 4.x
-* [mongoDB](https://www.mongodb.com/cloud/atlas/lp/try2?utm_source=google&utm_campaign=gs_footprint_row_search_brand_atlas_desktop&utm_term=mongodb&utm_medium=cpc_paid_search&utm_ad=e&gclid=EAIaIQobChMIubLRzaa06AIVArDtCh2MgwEKEAAYASAAEgLyjvD_BwE)
+* [Entity Framework](https://docs.microsoft.com/en-us/ef/)
+* [LINQ](https://docs.microsoft.com/en-us/dotnet/standard/using-linq)
 
 
 ## Setup
