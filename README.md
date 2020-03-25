@@ -10,7 +10,7 @@
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
-* [ASP.NET Core MVC provides features to build web APIs and web apps](#ASP.NET Core MVC provides features to build web APIs and web apps)
+* [ASP.NET Core MVC provides features to build web APIs and web apps](#asp)
 
 ## General info
 MERN stack project that track your or anyone else workout, you can add or delete or even edit your workout, but first you need to add yourself in database, so you always be able to see your exercise. Database is online at mongoDB. Frontend is write in react. Feel free to clone or download.
