@@ -30,9 +30,10 @@ MERN stack project that track your or anyone else workout, you can add or delete
 
 
 ## Setup
-Start new ASP.NET Core project in visual studio 2017. </br>
-And then choose: </br>
-![](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started/_static/image1.png)
+On the Start page, select New Project. In the New project dialog box, select the Visual C# category on the left, then Web, and then select the ASP.NET Web Application (.NET Framework) project template. Name your project "MvcMovie" and then choose OK.</br>
+![](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started/_static/image1.png)</br>
+In the New ASP.NET Web Application dialog, choose MVC and then choose OK.</br>
+![](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started/_static/image3.png)</br>
 
 ## ASP.NET Core MVC provides features to build [web APIs](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio) and [web apps](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/?view=aspnetcore-3.1)
 
